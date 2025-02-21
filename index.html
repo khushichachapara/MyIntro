@@ -164,13 +164,13 @@
       .link a:active {
         color: white;
       }
-      .img {
+      .imgage {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
       }
-      img {
+      .img {
         box-shadow: 9px 2px 5px 5px rgb(244, 65, 158);
       }
       .second {
@@ -192,13 +192,17 @@
           gap: 3rem;
         }
         .second i {
-          font-size: 7rem; /* Even bigger icons on mobile */
+          font-size: 8rem; /* Even bigger icons on mobile */
         }
       }
-      h2 {
+      h2{
         margin: 1rem;
         text-decoration: underline rgba(209, 9, 112, 0.864);
         text-underline-offset: 3px;
+        text-align: center;
+      }
+      h2:hover{
+        font-size:xx-large;        
       }
       p {
         max-width: 500px; /* Adjust width to control line breaks */
@@ -235,12 +239,84 @@
         transform: scale(1.2);
         box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
       }
-      .mywork {
+
+      .portfolio-content {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 30px;
+        max-width: 900rem;
         align-items: center;
+        justify-content: center;
+        margin: 0 auto;
       }
+      @media (max-width: 768px) {
+        .portfolio-content {
+            flex-direction: column; /* Stacks elements */
+            align-items: center;
+        }
+    
+        .proj-1, .proj-2 {
+         
+          display: block;
+          min-width: 100%;
+          padding: 1.9rem;
+        }
+
+    }
+
+      .proj-1, .proj-2 {
+        background: white;
+        width: 45%;
+        padding: 1rem;
+        max-width: 400px;
+        border-radius: 10px;
+        
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+  
+      .proj-1:hover, .proj-2:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+      }
+      .proj-1 img, .proj-2 img {
+        width: 100%;
+        border-bottom: 2px solid #3498db;
+      }
+  
+      .proj1-details, .proj2-details {
+        padding: 20px;
+      }
+
+      .proj1-details h2, .proj2-details h2 {
+        font-size: 24px;
+        color: #2c3e50;
+        margin: 10px 0;
+      }
+  
+      .proj1-details p, .proj2-details p {
+        color: #7f8c8d;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+  
+      .proj1-details button, .proj2-details button {
+        background: rgba(202, 10, 121, 0.7);
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-right: 10px;
+        transition: background-color 0.3s;
+      }
+  
+      .proj1-details button:hover, .proj2-details button:hover {
+        background: #a2087c;
+      }
+
     </style>
   </head>
   <body>
@@ -258,8 +334,9 @@
     </header>
     <section class="mainsection">
       <div class="first">
-        <div class="img">
+        <div class="image">
           <img
+          class="img"
             src="icon.png"
             alt="Khushi Chachapara"
             style="width: 15rem; height: 15rem; border-radius: 50%"
@@ -284,10 +361,44 @@
         <i class="fa-brands fa-js js-icon"></i>
         <i class="fa-brands fa-react react-icon"></i>
       </div>
-      <div class="mywork">
-        <h2>My Work</h2>
-      </div>
     </section>
+    <section>
+      <div>
+        <div>
+          <h2>Portfolio</h2>
+        </div>
+
+        
+        <div class="portfolio-content container">
+          <div class="proj-1">
+            <img src="bookzy.png" alt="Bookstore App" />
+            <div class="proj1-details">
+              <i class="fab fa-html5"></i>
+              <i class="fab fa-css3-alt"></i>
+              <i class="fab fa-js"></i>
+              <h3>Bookstore app</h3>
+              <p>Built Using MERN</p>
+              <button><a href="https://github.com/khushichachapara/BookzyMERN.git" target="blank">View source</a></button>
+              <button><a href="http://localhost:5173/" target="blank">Try it Live</a></button>
+            </div>
+          </div>
+          <div class="proj-2">
+            <img src="app.png" alt="Profile Card" />
+            <div class="proj2-details">
+              <i class="fab fa-html5"></i>
+              <i class="fab fa-css3-alt"></i>
+              <h3>E-commarce template</h3>
+              <p>Built Using HTML, CSS</p>
+              <button><a href="https://github.com/khushichachapara/html_css_/tree/c00a4d5c13e596cc651dd3f14c60956277d1144c/e%20commerce%20template" target="blank">View source</a></button>
+              <button><a href="file:///C:/html%20and%20css/index.html" target="blank">Try it Live</a></button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+    
     <footer>
       <h3 style="font-size: 1rem; letter-spacing: 0.3rem">
         &copy;2025-All Right Reserve
