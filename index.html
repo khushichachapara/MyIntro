@@ -160,6 +160,10 @@
         padding: 1rem;
         color: darkblue;
       }
+      li a{
+        color: whitesmoke;
+        text-decoration: none;
+      }
 
       .link a:active {
         color: white;
@@ -327,9 +331,9 @@
       </div>
       <nav>
         <ul>
-          <li>home</li>
-          <li>about</li>
-          <li>work</li>
+          <li><a href="#" class="home">home</a></li>
+          <li><a href="#about" class="about">about</a></li>
+          <li><a href="#work" class="work">Work</a></li>
         </ul>
       </nav>
     </header>
@@ -344,7 +348,7 @@
           />
         </div>
         <div class="contant">
-          <h2 class="intro">Hi, I'm Khushi Chachapara!</h2>
+          <h2 class="intro" id="about">Hi, I'm Khushi Chachapara!</h2>
           <p >
             I'm an MCA student at Marwadi University, passionate about learning
             and self-growth. I have a keen interest in web development and
@@ -366,7 +370,7 @@
     <section>
       <div>
         <div>
-          <h2>Portfolio</h2>
+          <h2 id="work">Portfolio</h2>
         </div>
 
         
@@ -417,4 +421,3 @@
     </footer>
   </body>
 </html>
-
